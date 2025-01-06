@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Raffi</title>
+  <link rel="icon" href="assets/pikachu.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav class="fixed-navbar">
+        <img src="assets/pikachu.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class='bx bx-menu' id="menu-icon"></i>
+      </nav>
+      <div class="header-text">
+        <h1>Halo, saya<span> Muhammad Raffi Hermawan</span><br>dari 05TPLP001</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -----------about----------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="assets/apih24.jpeg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+
+          <h2>Deskripsi singkat</h2>
+          <p>Saya sedang berkuliah di <b>Universitas Pamulang</b>
+            Saya mengambil jurusan Teknik Informatika
+            ,Saya memilih jurusan ini karena bingung ingin memilih jurusan apa jika berkuliah di sini, karena jurusan
+            ini
+            terlihat cukup menarik karena saya ingin mempelajari dunia IT</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Copywriting</span><br>Advertisement Writer</li>
+              <li><span>UI/UX</span><br>Design Web/App Interfaces</li>
+              <li><span>Web Development</span><br>Web App Development</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>SMA/SMK</span><br>SMK Averus Jakarta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------services---------- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="far fa-keyboard"></i>
+          <h2>Copywriter</h2>
+          <p>Saya menyediakan jasa untuk menulis iklan ataupun maupun sebuah tulisan caption postingan</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fas fa-crop"></i>
+          <h2>UI/UX Design</h2>
+          <p>Saya menyediakan jasa untuk membuat desain dari sebuah website yang akan dibuat</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Web Developer</h2>
+          <p>Saya menyediakan jasa untuk membuat atau membangun sebuah web atau aplikasi</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------portfolio------------>
+  <div id="portofolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('login')">Login</button>
+        <button onclick="filterProjects('calculator')">Calculator</button>
+        <button onclick="filterProjects('dashboard')">Dashboard</button>
+        <button onclick="filterProjects('game')">Game</button>
+      </div>
+      <div class="work-list">
+        <div class="work portfolio-item" data-category="login">
+          <img src="assets/ss log.png" alt="Logo Aplikasi" class="app-logo">
+          <h2>FORM LOGIN</h2>
+          <p>Project Work Form Login</p>
+          <a href="FORM LOGIN/Login.html">Klik Link</a>
+        </div>
+        <div class="work portfolio-item" data-category="calculator">
+          <img src="assets/ss kalku.png" alt="Project Kalkulator" class="app-logo">
+          <h2>Kalkulator Sederhana</h2>
+          <p>Project Work Kalkulator Sederhana</p>
+          <a href="KALKULATOR/kalku.html">Klik Link</a>
+        </div>
+        <div class="work portfolio-item" data-category="dashboard">
+          <img src="assets/ss dashboard.png" alt="Project Dashboard" class="app-logo">
+          <h2>Projects Dashboard</h2>
+          <p>Project Work Dashboard Sederhana</p>
+          <a href="DASHBOARD/dashboard.html">Klik Link</a>
+        </div>
+        <div class="work portfolio-item" data-category="game">
+          <img src="assets/tetris.png" alt="Game Tetris" class="app-logo">
+          <h2>Game Tetris</h2>
+          <p>Project Work Game Tetris Sederhana</p>
+          <a href="TETRIS/tetris.html">Klik Link</a>
+        </div>
+        <div class="work portfolio-item" data-category="dashboard">
+          <img src="assets/ss diagram.png" alt="Project Diagram Laporan Penjualan" class="app-logo">
+          <h2>Diagram Laporan Penjualan</h2>
+          <p>Project Chart Diagram</p>
+          <a href="DASHBOARD/chartdiagram.html">Klik Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -----------certificates----------- -->
+  <div id="certificates">
+    <div class="container">
+      <h1 class="sub-title">My Certificates</h1>
+      <div class="certificates-list">
+        <div class="certificate-item">
+          <img src="assets/certi html.jpg" alt="SoloLearn Certificate HTML" class="certificate-logo">
+          <h2>SoloLearn HTML Certificate</h2>
+          <p>Sertifikat penyelesaian kursus HTML di SoloLearn.</p>
+          <a href="https://www.sololearn.com/certificates/CC-XQBJJJM0" target="_blank">View Certificate</a>
+        </div>
+        <div class="certificate-item">
+          <img src="assets/certi css.jpg" alt="SoloLearn Certificate CSS" class="certificate-logo">
+          <h2>SoloLearn CSS Certificate</h2>
+          <p>Sertifikat penyelesaian kursus CSS di SoloLearn.</p>
+          <a href="https://www.sololearn.com/certificates/CC-CNY6EUHL" target="_blank">View Certificate</a>
+        </div>
+        <div class="certificate-item">
+          <img src="assets/certi js.jpg" alt="SoloLearn Certificate JavaScript" class="certificate-logo">
+          <h2>SoloLearn JavaScript Certificate</h2>
+          <p>Sertifikat penyelesaian kursus JavaScript di SoloLearn.</p>
+          <a href="https://www.sololearn.com/certificates/CC-LVYP8HZ9" target="_blank">View Certificate</a>
+        </div>
+        <div class="certificate-item">
+          <img src="assets/sertif js intermediate.jpg" alt="SoloLearn Certificate JavaScript Intermediate"
+            class="certificate-logo">
+          <h2>SoloLearn JavaScript Intermediate Certificate</h2>
+          <p>Sertifikat penyelesaian kursus JavaScript Intermediate di SoloLearn.</p>
+          <a href="https://www.sololearn.com/certificates/CC-EDZ3KTHE" target="_blank">View Certificate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -----------contact------------ -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class='bx bx-envelope'></i>Email: raffih708@gmail.com</p>
+          <p><i class='bx bxs-phone-call'></i>Phone: 081511929326</p>
+          <div class="social-icons">
+            <a href="https://instagram.com/raffihermawannn"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5010.499792283009!2d106.688564616879!3d-6.346458213202874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e5a6e26dc3cd%3A0xccd6344b8021119d!2sUniversitas%20Pamulang%20Kampus%202%20(UNPAM%20Viktor)!5e0!3m2!1sid!2sid!4v1736131853486!5m2!1sid!2sid"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Raffi's Portfolio.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

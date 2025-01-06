@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>Admin Panel</h2>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+        <ul id="navbarMenu">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#add-post">Add Post</a></li>
+            <li><a href="#manage-posts">Manage Posts</a></li>
+            <li><a href="#comments-section">Comments</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Admin Dashboard</h1>
+
+        <!-- Dashboard Cards -->
+        <div id="dashboard" class="dashboard">
+            <div class="card">
+                <h2>Posts</h2>
+                <p id="postsCount">0</p>
+            </div>
+            <div class="card">
+                <h2>Comments</h2>
+                <p id="commentsCount">0</p>
+            </div>
+            <div class="card">
+                <h2>Visitors</h2>
+                <p id="visitorsCount">0</p>
+            </div>
+        </div>
+
+        <!-- Add Post Section -->
+        <div id="add-post" class="add-post">
+            <h2>Add New Post</h2>
+            <form id="addPostForm">
+                <input type="text" id="postTitle" placeholder="Post Title" required>
+                <textarea id="postContent" placeholder="Post Content" required></textarea>
+                <button type="submit">Add Post</button>
+            </form>
+        </div>
+
+        <!-- Post List Section -->
+        <div id="manage-posts" class="post-list">
+            <h2>Manage Posts</h2>
+            <ul id="postList"></ul>
+        </div>
+
+        <!-- Comments Section -->
+        <div id="comments-section" class="comments-section">
+            <h2>Comments</h2>
+            <ul id="commentList"></ul>
+            <form id="addCommentForm">
+                <input type="text" id="commentAuthor" placeholder="Your Name" required>
+                <textarea id="commentContent" placeholder="Write a comment" required></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard - All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

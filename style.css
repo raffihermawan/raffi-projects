@@ -1,0 +1,605 @@
+/* Tambahkan scroll-behavior untuk membuat transisi smooth */
+html {
+  scroll-behavior: smooth;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #080808;
+  z-index: 999;
+}
+#menu-icon{
+  display: none;
+}
+.header {
+  padding-top: 60px;
+}
+
+.header-text {
+  padding-top: 30px;
+}
+
+*.header-text h1{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #080808;
+  color: #fff;
+}
+#header{
+  width: 100%;
+  height: 100vh;
+  background-size:cover;
+  background-position: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.container{
+  padding: 0 10%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li{
+  margin: 0 20px;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 5px;
+  flex-direction: row;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #0004ff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top:20px;
+  font-size:30px;
+  color: #fff;
+}
+.header-text h1{
+  font-size: 50px;
+  margin-top: 10px;
+  color: #fff;
+}
+.header-text p {
+  font-size: 50px;
+}
+.header-text p span{
+  color: white
+}
+.header-text h1 span{
+  color: #F0F8FF;
+}
+
+#sidemenu li{
+  flex-direction: row;
+}
+
+/* -----------about---------- */
+#about{
+  margin-bottom: 60px;
+  padding: 80px 0;
+  color: #ababab;
+  font-family: monospace;
+  font-size: 14px;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1{
+  flex-basis: 45%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.about-col-2{
+  flex-basis: 50%;
+}
+
+.sub-title{
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #0004ff;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+  width: 50%;
+}
+
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span{
+  color: #473bef;
+  font-size: 14px;
+}
+
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+/*---------------services----------*/
+#services {
+  margin-bottom: 60px;
+  padding: 60px 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: 14px;
+}
+.sub-title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px solid transparent;
+  /*Added'solid'forborderstyle*/transition: background 0.5s, transform 0.5s;
+  -webkit-transition: background 0.5s, transform 0.5s;
+  -moz-transition: background 0.5s, transform 0.5s;
+  -ms-transition: background 0.5s, transform 0.5s;
+  -o-transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: #0004ff;
+  transform: translateY(-10px);
+}
+
+/*-----------portfolio------------*/
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.filter-buttons button:focus {
+  outline: none;
+  background-color: #004085;
+}
+
+/* Portfolio Items */
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  color: #0056b3;
+}
+
+#portfolio {
+  background-color: #080808;
+  padding: 80px 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work {
+  background-color: #080808;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  width: calc(50% - 20px);
+  text-align: left;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* Portfolio Item Styles */
+.work.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.work.portfolio-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.work.portfolio-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 85, 255, 0.25); /* Lightened background */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px; /* Make the overlay corners round */
+}
+
+.work.portfolio-item:hover::before {
+  opacity: 1;
+}
+
+.work h2,
+.work p,
+.work a {
+  position: relative;
+  z-index: 2;
+}
+
+.app-logo {
+  width: 450px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for logo */
+  border: 2px solid #0044cc; /* Adjusted border color */
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect on logo */
+}
+
+.work h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+  transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+.work p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.work a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 6px;
+}
+
+.work a:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px); /* Adds a small hover effect on link */
+}
+
+  /* Mengatur layout dan ukuran gambar di section certificates */
+  .certificates-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+  .certificate-item {
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Efek hover pada item sertifikat */
+  .certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Gambar sertifikat */
+  .certificate-item img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Efek hover untuk gambar sertifikat */
+  .certificate-item img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Efek hover untuk link */
+  .certificate-item a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .certificate-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+/* ------------Contact--------- */
+#contact {
+  margin-bottom: 60px;
+  font-family: monospace;
+  font-size: 14px;
+}
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #0004ff;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.social-icons a:hover{
+  color: #0004ff;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  color: #fff;
+  border-radius: 10px;
+  background: #0004ff;
+}
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Tambahkan ke style.css */
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-family: monospace;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+/* Copyright Text Styles */
+.footer-content p::before {
+  content: "\00a9";
+  padding-right: 5px;
+}
